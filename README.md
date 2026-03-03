@@ -8,15 +8,17 @@ After downloading the folder from github, follow the steps bellow to run the ANN
 If you do not have Conda installed on your computer, make sure to install as we will need to create a Conda environment to run the ANN
 
 ### Install Tensorflow
-The ANN only runs in a tensorflow (tf) environment, so tensorflow must be installed before doing anythign else.  
+The ANN only runs in a tensorflow (tf) environment, so tensorflow must be installed before doing anything else.  
 `conda install tf`
 
 ### Create a New Environment
-The ANN will only run if a specifalized python environment is created. Attempting to run the ANN is the base environment will result in errors. Firsy, create this environment by running the command:  
+The ANN will only run if a specialized python environment is created. Attempting to run the ANN in the base environment will result in errors. First, create this environment by running the command:  
 `conda create --name tf tensorflow`  
-After creating the environment, make sure that you are operating out of it by running:  
+After creating the environment, it will need to be initialized for Bash; run
+`conda initialize bash`
+Next, make sure that you are operating out of it by running:  
 `conda activate tf`  
-You will know if you are successful if the blue dot switched from the base environment to the tf environment.
+You will know that you are successful if the blue dot switched from the base environment to the tf environment.
 
 ### Install Additional Libraries
 Install any additional libraries within the tf environment. The following were libraries I had to install, but you may need to install more:
@@ -24,7 +26,7 @@ Install any additional libraries within the tf environment. The following were l
 `conda install anaconda::scikit-learn`
 
 ### Run!
-To test that the ANNN is working run the following line of code:  
+To test that the ANN is working run the following line of code:  
 `WRAPT_DISABLE_EXTENSIONS=true python predict_modify.py --formula TiVCrNbTa VCrNbMoTa TiVCrZrMo` 
 If the ANN is working properly it should output:  
 ```
